@@ -16,7 +16,7 @@ void count();
 "bool"			{ count(); return(BOOL); }
 "void"			{ count(); return(VOID); }
 "true"			{ count(); return(TRUE); }
-"false"		    { count(); return(VOLATILE); }
+"false"		    { count(); return(FALSE); }
 "if"			{ count(); return(IF); }
 "else"			{ count(); return(ELSE); }
 "while"			{ count(); return(WHILE); }

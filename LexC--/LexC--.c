@@ -11,7 +11,7 @@ const char* symbols[] = {
 	"BOOL",
 	"VOID",
 	"TRUE",
-	"VOLATILE",
+	"FALSE",
 	"IF",
 	"ELSE",
 	"WHILE",
@@ -51,14 +51,19 @@ int main()
 {
 	int lexUnit = 0;
 	yyin = fopen("input.csrc", "rt");
-	if(yyin != NULL)
+	if (yyin != NULL)
 	{
 		while ((lexUnit = yylex()) != END) {
-			printf("-> TOKEN: %s \n", symbols[lexUnit]);
+			if (lexUnit == BAD_CHARACTER) {
+				printf("-> WARNING! %s \n", symbols[lexUnit]);
+			}
+			else {
+				printf("-> TOKEN: %s \n", symbols[lexUnit]);
+			}
 		}
 		fclose(yyin);
 	}
 	else {
 		printf("Fisier inexistent");
 	}
-} 
+}

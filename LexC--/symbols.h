@@ -1,11 +1,11 @@
-#ifndef __SYMBOLS_H__
+ #ifndef __SYMBOLS_H__
 #define __SYMBOLS_H__
 #define END				    0
 #define INT				    1
 #define BOOL			    2
 #define VOID			    3
 #define TRUE			    4
-#define VOLATILE		    5
+#define FALSE		        5
 #define IF				    6
 #define ELSE			    7
 #define WHILE			    8

@@ -19,7 +19,7 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="lex.yy.c">
-      <Filter>Source Files</Filter>
+      <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
