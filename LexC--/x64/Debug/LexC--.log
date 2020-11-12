@@ -1,8 +1,11 @@
-﻿  lex.yy.c
+﻿c.y : warning : 156 shift/reduce conflicts [-Wconflicts-sr]
+  c.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
+  c.tab.c
+c.tab.c(1063,1): warning C4244: 'initializing': conversion from '__int64' to 'long', possible loss of data
+  lex.yy.c
 c.lex(12,10): warning C4013: 'comment' undefined; assuming extern returning int
 c.lex(27,29): warning C4013: 'check_type' undefined; assuming extern returning int
 lex.yy.c(1588,46): warning C4013: 'isatty' undefined; assuming extern returning int
-  LexC--.c
   Generating Code...
 E:\facultate\an4\translator design\translatorDesignC--\LexC--\c.lex(85): warning C4716: 'comment': must return a value
   LexC--.vcxproj -> E:\facultate\an4\translator design\translatorDesignC--\x64\Debug\LexC--.exe

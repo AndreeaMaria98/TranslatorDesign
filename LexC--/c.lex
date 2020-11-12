@@ -3,7 +3,7 @@ L			[a-zA-Z_]
 			
 %{
 #include <stdio.h>
-#include "symbols.h"
+#include "c.tab.h"
 
 void count();
 %}

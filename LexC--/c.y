@@ -1,6 +1,8 @@
 %{
 #include <stdio.h>
 #include <stdlib.h>
+extern int yylex(void);
+int yyerror(char* s);
 %}			    
 %token INT
 %token BOOL
@@ -51,7 +53,7 @@ program
  ;
 varDecl
  : type id END_OF_INSTRUCTION
- | type id LEFT_BRACKET INT RIGHT_BRACKET END_OF_INSTRUCTION
+ | type id LEFT_BRACKET CONSTANT RIGHT_BRACKET END_OF_INSTRUCTION
  ;
 type
  : INT
@@ -122,6 +124,7 @@ atom
  | fnCallExpr
  | subscriptExpr
  | id
+ | CONSTANT
  ;
 fnCallExpr
  : id LEFT_PARANTHESIS RIGHT_PARANTHESIS
@@ -142,7 +145,8 @@ id
  : IDENTIFIER
  ;
 %%
-void yyerror(char* s) 
+int yyerror(char* s) 
 { 
 	printf("%s\n", s);
+	return 0;
 }

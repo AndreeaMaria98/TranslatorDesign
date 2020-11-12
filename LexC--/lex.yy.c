@@ -503,7 +503,7 @@ char *yytext;
 #line 1 "c.lex"
 #line 5 "c.lex"
 #include <stdio.h>
-#include "symbols.h"
+#include "c.tab.h"
 
 void count();
 #line 509 "lex.yy.c"
